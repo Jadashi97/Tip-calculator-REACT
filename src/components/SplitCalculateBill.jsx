@@ -1,6 +1,8 @@
-import React from 'react'
+import React from 'react';
 
 const SplitCalculateBill = () => {
+
+
   return (
     <div>
         <div className="container" id="bottom">
@@ -9,7 +11,7 @@ const SplitCalculateBill = () => {
                 <div className="controls">
                     <span className="buttonContainer">
                         <button className="splitButton" onClick={"increasePeople()"}>
-                        <span className="buttonText">+</span>
+                            <span className="buttonText">+</span>
                         </button>
                     </span>
                     <span className="splitAmount" id="numberOfPeople">1</span>
