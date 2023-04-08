@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css';
 import Header from './components/Header';
 import TotalBill from './components/TotalBill';
+import Footer from './components/TotalBill';
 
 function App() {
 
