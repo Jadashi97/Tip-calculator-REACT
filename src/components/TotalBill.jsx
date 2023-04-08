@@ -6,7 +6,7 @@ const TotalBill = ()=> {
     const [bill, setBill] = useState('');
     const [tipPercentage, setTipPercentage] = useState("10%");
     const [tipAmount, setTipAmount] = useState(0);
-    const [splitTotal, setSplitTotal] = useState("$0.00");
+    const [splitTotal, setSplitTotal] = useState(0);
     const [split, setSplit] = useState(1);
 
     function handleBillChange(e){
@@ -35,10 +35,15 @@ const TotalBill = ()=> {
     function calculate(){
         const percentage = 1 + parseInt(tipPercentage.replace('%',''))/100;
         const result = (bill * percentage / split).toFixed(2);
-        setSplit(result);
+        setSplitTotal(result);
     }
 
-    useEffect(()=>{
+    /*
+        useEffect hook has been used to call the calculate 
+        function whenever any of the dependencies change. 
+        The dependencies are bill, tipPercentage, and split
+    */
+    useEffect(()=>{  
         calculate()
     }, [bill,tipPercentage, split])
 
